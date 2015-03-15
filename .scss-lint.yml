@@ -6,9 +6,12 @@ linters:
     space_after_bang: false
   BorderZero:
     enabled: false
+    convention: zero
   ColorKeyword:
     enabled: true
     severity: warning
+  ColorVariable:
+    enabled: false
   Comment:
     enabled: true
   DebugStatement:
@@ -36,7 +39,9 @@ linters:
     style: lowercase
   HexValidation:
     enabled: true
-  IdWithExtraneousSelector:
+  IdSelector:
+    enabled: true
+  ImportantRule:
     enabled: true
   ImportPath:
     enabled: true
@@ -44,6 +49,7 @@ linters:
     filename_extension: false
   Indentation:
     enabled: true
+    allow_non_nested_indentation: false
     character: space
     width: 2
   LeadingZero:
@@ -54,6 +60,7 @@ linters:
     force_nesting: true
   NameFormat:
     enabled: true
+    allow_leading_underscore: true
     convention: hyphenated_lowercase
   NestingDepth:
     enabled: true
@@ -61,18 +68,21 @@ linters:
     severity: warning
   PlaceholderInExtend:
     enabled: false
+  PropertyCount:
+    enabled: false
   PropertySortOrder:
     enabled: true
     ignore_unspecified: false
     severity: warning
+    separate_groups: false
   PropertySpelling:
     enabled: true
     extra_properties: []
   QualifyingElement:
     enabled: true
-    allow_with_attribute: false
-    allow_with_class: false
-    allow_with_id: false
+    allow_element_with_attribute: false
+    allow_element_with_class: false
+    allow_element_with_id: false
     severity: warning
   SelectorDepth:
     enabled: true
@@ -118,6 +128,9 @@ linters:
     enabled: true
   UrlQuotes:
     enabled: true
+  VariableForProperty:
+    enabled: false
+    properties: []
   VendorPrefixes:
     enabled: true
     identifier_list: bourbon
@@ -126,5 +139,3 @@ linters:
   ZeroUnit:
     enabled: true
     severity: warning
-  Compass::*:
-    enabled: false
